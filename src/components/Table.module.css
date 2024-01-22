@@ -1,0 +1,22 @@
+.table {
+  margin: 20px;
+  width: 100%;
+   border-radius: 5px;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color:rgb(121, 121, 121);
+  color: white;
+  font-weight: normal;
+ 
+}
+
+
+/* Add your table styling here */
