@@ -11,47 +11,49 @@ const Table = ({ data, onEdit, onDelete }) => {
   };
 
   return (
-    <table className={styles.table}>
-      <thead>
-        <tr>
-          <th>S.No</th>
-          <th>Name</th>
-          <th>Contact</th>
-          <th>Email</th>
-          <th>Weekdays</th>
-          <th>Gender</th>
-          <th>DOB</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((row, index) => (
-          <tr key={index}>
-            <td>{index + 1}</td>
-            <td>{row.name}</td>
-            <td>{row.contact}</td>
-            <td>{row.email}</td>
-            <td>{getFormattedWeekdays(row.weekdays)}</td>
-            <td>{row.gender}</td>
-            <td>{row.dob}</td>
-            <td>
-              <button
-                className="btn btn-primary mt-2"
-                onClick={() => onEdit(index)}
-              >
-                Edit
-              </button>
-              <button
-                className="btn btn-danger mt-2"
-                onClick={() => onDelete(index)}
-              >
-                Delete
-              </button>
-            </td>
+    <div className="container">
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Weekdays</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Action</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data.map((row, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{row.name}</td>
+              <td>{row.contact}</td>
+              <td>{row.email}</td>
+              <td>{getFormattedWeekdays(row.weekdays)}</td>
+              <td>{row.gender}</td>
+              <td>{row.dob}</td>
+              <td className={styles.table_button}>
+                <button
+                  className="btn btn-primary mt-2"
+                  onClick={() => onEdit(index)}
+                >
+                  Edit
+                </button>
+                <button
+                  className="btn btn-danger mt-2 "
+                  onClick={() => onDelete(index)}
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

@@ -1,8 +1,10 @@
 .table {
   margin: 20px;
-  width: 100%;
+  width: 97%;
    border-radius: 5px;
   border-collapse: collapse;
+ 
+ 
 }
 
 .table th, .table td {
@@ -18,5 +20,8 @@
  
 }
 
-
+.table_button{
+  display: flex;
+  gap: 0.5rem;
+}
 

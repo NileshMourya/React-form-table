@@ -122,6 +122,7 @@ const EditModal = ({ rowData, onSave, onClose }) => {
           name="dob"
           value={editedData.dob}
           onChange={handleChange}
+          required
         />
       </div>
       <div className={styles.button_}>
