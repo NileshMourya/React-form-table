@@ -12,7 +12,9 @@ function App() {
 
   // form submit function
   const handleFormSubmit = (data) => {
+    console.log(data);
     setFormData((prevData) => [...prevData, data]);
+    console.log(formData);
   };
 
   const handleEdit = (index) => {
@@ -21,6 +23,7 @@ function App() {
 
   const handleSaveEdit = (editedData) => {
     setFormData((prevData) => {
+      console.log(prevData);
       const newData = [...prevData];
       newData[prevData.indexOf(editData)] = editedData;
       return newData;

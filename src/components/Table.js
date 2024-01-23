@@ -11,23 +11,25 @@ const Table = ({ data, onEdit, onDelete }) => {
   };
 
   return (
-    <div className="container">
-      <table className={styles.table}>
+    <div className="container mt-5">
+      <table
+        className={`${styles.table} table table-striped table-bordered table-responsive`}
+      >
         <thead>
           <tr>
-            <th>S.No</th>
-            <th>Name</th>
-            <th>Contact</th>
-            <th>Email</th>
-            <th>Weekdays</th>
-            <th>Gender</th>
-            <th>DOB</th>
-            <th>Action</th>
+            <th scope="col">S.No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Email</th>
+            <th scope="col">Weekdays</th>
+            <th scope="col">Gender</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
           {data.map((row, index) => (
-            <tr key={index}>
+            <tr scope="row" key={index}>
               <td>{index + 1}</td>
               <td>{row.name}</td>
               <td>{row.contact}</td>

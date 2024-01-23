@@ -1,4 +1,4 @@
-.form {
+ .form {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
- width: auto;
+
 } 
 
 .weekday{
@@ -20,10 +20,12 @@
 }
 .gender{
   margin-top: 1rem;
+  margin-left: 1rem;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
@@ -37,7 +39,3 @@
   background-color:rgb(214, 229, 243);
   padding: 4px;
 }
-
-/* .inputsize{
-  width: 30rem;
-} */

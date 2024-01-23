@@ -32,7 +32,7 @@ const EditModal = ({ rowData, onSave, onClose }) => {
     <div className={styles.modal}>
       <h2 className={styles.heading}>Edit Data</h2>
       <div className="input-group flex-nowrap mt-2">
-        <span class="input-group-text" id="addon-wrapping">
+        <span className="input-group-text" id="addon-wrapping">
           Name
         </span>
         <input
@@ -46,7 +46,7 @@ const EditModal = ({ rowData, onSave, onClose }) => {
         />
       </div>
       <div className="input-group flex-nowrap mt-2">
-        <span class="input-group-text" id="addon-wrapping">
+        <span className="input-group-text" id="addon-wrapping">
           Email
         </span>
         <input
@@ -60,7 +60,7 @@ const EditModal = ({ rowData, onSave, onClose }) => {
         />
       </div>
       <div className="input-group flex-nowrap mt-2">
-        <span class="input-group-text" id="addon-wrapping">
+        <span className="input-group-text" id="addon-wrapping">
           Contact
         </span>
         <input

@@ -58,49 +58,53 @@ const Form = ({ onSubmit }) => {
   return (
     <div className="container-sm">
       <form className={`${styles.form}`} onSubmit={handleSubmit}>
-        <div className={`input-group mb-3 ${styles.inputsize}`}>
-          <span className="input-group-text" id="inputGroup-sizing-default">
-            Name
-          </span>
-          <input
-            type="text"
-            className="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default"
-            onChange={handleChange}
-            value={formData.name}
-            name="name"
-          />
+        <div className="row mb-3">
+          <div className="col-md-6">
+            <label className="form-label">Name</label>
+            <input
+              type="text"
+              className="form-control"
+              onChange={handleChange}
+              value={formData.name}
+              name="name"
+            />
+          </div>
+          <div className="col-md-6">
+            <label className="form-label">Email</label>
+            <input
+              type="email"
+              className="form-control"
+              onChange={handleChange}
+              value={formData.email}
+              name="email"
+              required
+            />
+          </div>
         </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">
-            Email
-          </span>
-          <input
-            type="email"
-            className="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default"
-            onChange={handleChange}
-            value={formData.email}
-            name="email"
-            required
-          />
-        </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">
-            Contact No
-          </span>
-          <input
-            type="number"
-            className="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default"
-            onChange={handleChange}
-            value={formData.contact}
-            name="contact"
-            required
-          />
+
+        <div className="row mb-3">
+          <div className="col-md-6">
+            <label className="form-label">Contact No</label>
+            <input
+              type="number"
+              className="form-control"
+              onChange={handleChange}
+              value={formData.contact}
+              name="contact"
+              required
+            />
+          </div>
+          <div className="col-md-6">
+            <label className="form-label">Date of Birth</label>
+            <input
+              type="date"
+              className={`${styles.dob_date} form-control`}
+              name="dob"
+              value={formData.dob}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
         <div className={styles.weekday}>
           Weekdays:
@@ -145,7 +149,7 @@ const Form = ({ onSubmit }) => {
             Female
           </div>
         </label>
-        <div className={`input-group-text ${styles.date}`}>
+        {/* <div className={`input-group-text ${styles.date}`}>
           Date of Birth:
           <input
             type="date"
@@ -155,7 +159,7 @@ const Form = ({ onSubmit }) => {
             onChange={handleChange}
             required
           />
-        </div>
+        </div> */}
         <button type="submit" className="btn btn-primary mt-2">
           Submit
         </button>
